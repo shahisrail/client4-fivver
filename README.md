@@ -25,7 +25,7 @@ npm -v
 
 # Clone the repository
 ```
-git clone https://github.com/shahisrail/fivver_client2.git
+git clone https://github.com/shahisrail/fivver_client3.git
 ```
 
 
