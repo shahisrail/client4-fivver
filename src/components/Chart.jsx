@@ -70,9 +70,9 @@ const OrganizationStats = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-8 font-bold justify-around font-sans p-6">
+    <div className="grid grid-cols-1 items-start lg:grid-cols-2 gap-8 font-bold justify-around font-sans p-6">
       {/* Organization Table */}
-      <div className=" rounded-lg overflow-hidden pt-[41px]">
+      <div className=" rounded-lg overflow-hidden pt-[64px]">
         <table className="table-auto w-full text-left">
           <thead className="text-gray-700">
             <tr>
@@ -82,15 +82,15 @@ const OrganizationStats = () => {
           </thead>
           <tbody>
             <tr className="border-t-2 border-black">
-              <td className="px-4 py-2">Headcount</td>
+              <td className="px-4 py-3">Headcount</td>
               <td className="border-l-2 border-black px-4 py-2">{headcount}</td>
             </tr>
             <tr className="border-t border-gray-300">
-              <td className="px-4 py-2">Directs</td>
+              <td className="px-4 py-3">Directs</td>
               <td className="border-l-2 border-black px-4 py-2">{directs}</td>
             </tr>
             <tr className="border-t border-gray-300">
-              <td className="px-4 py-2">Org Depth</td>
+              <td className="px-4 py-3">Org Depth</td>
               <td className="border-l-2 border-black px-4 py-2">{orgDepth}</td>
             </tr>
           </tbody>
@@ -98,10 +98,10 @@ const OrganizationStats = () => {
       </div>
 
       {/* Percentile Charts */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-2">
         {chartData.map((chart, index) => (
           <div key={index} className="text-center p-4">
-            <h4 className="text-xl mb-4 font-bold">{chart.title}</h4>
+            <h4 className="lg:text-sm mb-4 font-bold">{chart.title}</h4>
             <h4 className="text-sm mb-4 font-bold">50Th</h4>
 
             <div className="overflow-x-auto">
