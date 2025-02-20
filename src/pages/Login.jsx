@@ -33,7 +33,7 @@ const Login = () => {
             Keeping your information secure
           </h2>
           <h2 className="text-[1.1875rem] l p-4">
-            Do not share your Government Gateway user ID and password with  branyone else.
+            Do not share your Government Gateway user ID and password with  anyone else.
           </h2>
         </div>
         <h2 className="text-1xl md:text-2xl lg:text-4xl font-bold">

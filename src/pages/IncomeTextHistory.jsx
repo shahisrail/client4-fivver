@@ -69,7 +69,7 @@ const IncomeTextHistory = () => {
           endDate: "22 March 2022",
           taxableIncome: "£30,146.86",
           taxPaid: "£3,592",
-          taxCode: "1189LX",
+          taxCode: "1189LXign",
         },
       ],
     },
