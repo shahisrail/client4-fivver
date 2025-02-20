@@ -25,13 +25,13 @@ npm -v
 
 # Clone the repository
 ```
-git clone https://github.com/shahisrail/fivver_client3.git
+git clone https://github.com/shahisrail/client4-fivver.git
 ```
 
 
 # Navigate to the project directory
 ```
-cd fivver_client2
+cd client4-fivver
 ```
 # Install all dependencies
 ```

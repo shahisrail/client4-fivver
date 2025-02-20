@@ -3,7 +3,7 @@ import Nav3 from "../components/Nav/Nav3";
 const IncomeTextHistory = () => {
   const incomeHistory = [
     {
-      year: "6 April 2022 to 5 April 2023",
+      year: "6 April 2024 to 5 April 2025",
       entries: [
         {
           employer: "WSP UK LTD",
@@ -23,6 +23,12 @@ const IncomeTextHistory = () => {
           taxPaid: "£4,634.40",
           taxCode: "816LX",
         },
+      ],
+    },
+    {
+      view: "View 2023 to 2024 tax year summary",
+      year: "6 April 2022 to 5 April 2023",
+      entries: [
         {
           employer: "WSP UK LTD",
           reference: "68/G85",
@@ -31,6 +37,15 @@ const IncomeTextHistory = () => {
           taxableIncome: "£11,307.70",
           taxPaid: "£1,741.80",
           taxCode: "Currently unavailable",
+        },
+        {
+          employer: "AVISON YOUNG (UK) LIMITED",
+          reference: "951/O7068",
+          startDate: "29 March 2021",
+          endDate: "22 March 2022",
+          taxableIncome: "£30,146.86",
+          taxPaid: "£3,592",
+          taxCode: "1189LX",
         },
         {
           employer: "INTERACTION RECRUITMENT PLC",
@@ -48,13 +63,11 @@ const IncomeTextHistory = () => {
       year: "6 April 2021 to 5 April 2022",
       entries: [
         {
-          employer: "AVISON YOUNG (UK) LIMITED",
+          employer: "AECOM LTD",
           reference: "951/O7068",
           startDate: "29 March 2021",
           endDate: "22 March 2022",
-          taxableIncome: "£30,146.86",
-          taxPaid: "£3,592",
-          taxCode: "1189LX",
+          taxCode: "Currently unavailable",
         },
       ],
     },
@@ -120,12 +133,13 @@ const IncomeTextHistory = () => {
 
         {incomeHistory.map((yearData, index) => (
           <div key={index} className="space-y-6 py-4">
-            <h2 className="font-bold text-[1.5rem]">{yearData.year}</h2>
             {yearData.view && (
               <button className="text-blue-600 underline text-lg font-semibold">
                 {yearData.view}
               </button>
             )}
+            <h2 className="font-bold text-[1.5rem]">{yearData.year}</h2>
+            
             {yearData.entries.map((entry, i) => (
               <div key={i} className="border w-full md:w-1/2">
                 <h2 className="bg-[#F3F2F1] p-5 text-[1.1875rem] text-black font-bold">
