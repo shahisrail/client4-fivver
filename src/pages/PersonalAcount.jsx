@@ -6,12 +6,12 @@ const PersonalAcount = () => {
     <div>
       <Nav2 />
       <div className="max-w-7xl mx-auto space-y-4 p-10 md:p-5 lg:p-0">
-        <div className="border-4 border-[#1d70b8]">
+        <div className="border-4 border-[#1d70b8] mb-[50px]">
           <h2 className="bg-[#1d70b8] text-white text-1xl font-bold p-2">
             Important
           </h2>
           <h2 className="text-1xl md:text-2xl p-4">
-            <span className="font-bold">Text credits end on 5 April 2025</span>
+            <span className="font-bold">Tax credits end on 5 April 2025</span>
             <span className="underline text-[#1d70b8]">
               {" "}
               Find out what to do if <br /> you claim tax credits
@@ -19,13 +19,13 @@ const PersonalAcount = () => {
           </h2>
         </div>
         <div>
-          <h4 className="text-[20px] text-gray-400">Account home</h4>
-          <h2 className="text-2xl md:text-4xl font-bold">Paul Adeyemo</h2>
+          <h4 className="text-[1.6875rem] text-gray-400">Account home</h4>
+          <h2 className="text-[2xl] md:text-[3rem]  font-bold">Paul Adeyemo</h2>
         </div>
         <div className="flex items-center space-x-4">
-          <p className="border-r-[5px] border-gray-500 h-10"></p>
+          <p className="border-r-[10px] border-gray-200 h-10"></p>
           <h4 className="text-[15px] md:text-[20px] text-[#1d70b8] underline">
-            <Link to="/save-your-incurance-number">
+            <Link className="selection:bg-yellow-300  active:bg-yellow-300" to="/save-your-incurance-number">
               {" "}
               View and save your National Insurance Number
             </Link>
@@ -33,7 +33,7 @@ const PersonalAcount = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-5">
           {/* First Group of Cards */}
-          <div className="bg-[#F9FBF8]  transition-colors duration-300">
+          <div className="bg-[#f8f8f8]  transition-colors duration-300">
             <div className="card-body ">
               <h2 className="card-title font-semibold text-[#1d70b8] ">
                 Latest News and Updates
@@ -54,10 +54,10 @@ const PersonalAcount = () => {
               </p>
             </div>
           </div>
-          <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
+          <div className="bg-[#f8f8f8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
             <div className="card-body">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white hover:underline">
-                <Link className="hover:underline" to="/cheak-income-taxt">
+                <Link className="hover:underline selection:bg-yellow-300  active:bg-yellow-300" to="/cheak-income-taxt">
                   {" "}
                   Pay As You Earn (PAYE)
                 </Link>
@@ -69,7 +69,7 @@ const PersonalAcount = () => {
               </p>
             </div>
           </div>
-          <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
+          <div className="bg-[#f8f8f8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
             <div className="card-body">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white">
                 6 April 2023 to 5 April 2024
@@ -81,7 +81,7 @@ const PersonalAcount = () => {
               </p>
             </div>
           </div>
-          <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
+          <div className="bg-[#f8f8f8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
             <div className="card-body">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white">
                 6 April 2022 to 5 April 2023
@@ -94,7 +94,7 @@ const PersonalAcount = () => {
               </p>
             </div>
           </div>
-          <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
+          <div className="bg-[#f8f8f8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
             <div className="card-body">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white">
                 Your National Insurance and State Pension
@@ -109,7 +109,7 @@ const PersonalAcount = () => {
               </p>
             </div>
           </div>
-          <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
+          <div className="bg-[#f8f8f8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
             <div className="card-body">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white">
                 View your Annual Tax Summary
@@ -129,7 +129,7 @@ const PersonalAcount = () => {
           <p className="border-b-2"></p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-5">
-          <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
+          <div className="bg-[#f8f8f8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
             <div className="card-body">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white">
                 Tax credits
@@ -140,7 +140,7 @@ const PersonalAcount = () => {
               </p>
             </div>
           </div>
-          <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
+          <div className="bg-[#f8f8f8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
             <div className="card-body">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white">
                 Child Benefit
@@ -150,7 +150,7 @@ const PersonalAcount = () => {
               </p>
             </div>
           </div>
-          <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
+          <div className="bg-[#f8f8f8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
             <div className="card-body">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white">
                 Marriage Allowance
@@ -161,7 +161,9 @@ const PersonalAcount = () => {
               </p>
             </div>
           </div>
+          
         </div>
+        
         <p className="text-[#1d70b8] underline  py-4">
           {" "}
           Is the page not working properly? (opens in new tab){" "}

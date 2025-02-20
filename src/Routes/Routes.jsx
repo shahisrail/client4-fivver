@@ -5,6 +5,14 @@ import PersonalAcount from "../pages/PersonalAcount";
 import InsureanceNumber from "../pages/InsureanceNumber";
 import IncomeText from "../pages/IncomeText";
 import IncomeTextHistory from "../pages/IncomeTextHistory";
+import Login from "../pages/Login";
+import EmploymentHistory from "../pages/EmploymentHistory";
+
+// Authentication check function
+
+
+// Protected route wrapper
+
 
 const router = createBrowserRouter([
   {
@@ -13,7 +21,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Bussness />,
+        element: <EmploymentHistory />,
+      },
+      {
+        path: "/bussness",
+        element :<Bussness /> ,
+      },
+      {
+        path: "/bussness",
+        element :<Bussness /> ,
       },
       {
         path: "/personal-account",
@@ -21,17 +37,23 @@ const router = createBrowserRouter([
       },
       {
         path: "/save-your-incurance-number",
-        element: <InsureanceNumber />,
+        element:  <InsureanceNumber />
       },
       {
         path: "/cheak-income-taxt",
-        element: <IncomeText />,
+        element: <IncomeText />
       },
       {
         path: "/income-taxt-history",
-        element: <IncomeTextHistory />,
+        element: <IncomeTextHistory />
+      },
+      
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },
 ]);
+
 export default router;

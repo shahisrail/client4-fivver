@@ -10,24 +10,24 @@ const IncomeText = () => {
           <h2 className="bg-[#1d70b8] text-white text-1xl font-bold p-2">
             Important
           </h2>
-          <h2 className="text-2xl p-4">
+          <h2 className="text-2xl p-6 ">
             <span className="font-bold">
               We changed your tax code on 17 December 2024. <br />
             </span>
-            <span className="underline text-[#1d70b8]">
+            <span className="underline text-[#1d70b8] my-6">
               {" "}
               View your latest tax code change
             </span>
           </h2>
         </div>
-        <div>
-          <h4 className="text-[20px] text-gray-400">PAUL ADEYEMO</h4>
-          <h2 className="text-2xl md:text-4xl font-bold">PAYE Income Tax overview</h2>
+        <div className="py-10"> 
+          <h4 className="text-[1.6875rem] text-gray-400">PAUL ADEYEMO</h4>
+          <h2 className="text-2xl md:text-[3rem] font-bold">PAYE Income Tax overview</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-5">
           <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
-            <div className="card-body">
+            <div className="card-body  border-2 border-gray-300">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white">
                 Check current tax year
               </h2>
@@ -39,9 +39,9 @@ const IncomeText = () => {
             </div>
           </div>
           <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
-            <div className="card-body">
+            <div className="card-body border-2 border-gray-300">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white hover:underline">
-                <Link to="/income-taxt-history">
+                <Link className="selection:bg-yellow-300  active:bg-yellow-300" to="/income-taxt-history">
                   {" "}
                   View and print Income Tax and employment history
                 </Link>
@@ -53,7 +53,7 @@ const IncomeText = () => {
             </div>
           </div>
           <div className="bg-[#F9FBF8] hover:bg-[#2D5CA5] hover:text-white transition-colors duration-300">
-            <div className="card-body">
+            <div className="card-body border-2 border-gray-300">
               <h2 className="card-title font-semibold text-[#1d70b8] hover:text-white">
                 Check next tax year
               </h2>
@@ -64,6 +64,7 @@ const IncomeText = () => {
             </div>
           </div>
         </div>
+        
         <p className="text-[#1d70b8] underline  py-4">
           {" "}
           Is the page not working properly? (opens in new tab){" "}

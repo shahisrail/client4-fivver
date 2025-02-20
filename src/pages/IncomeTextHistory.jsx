@@ -1,390 +1,193 @@
-import {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  PDFDownloadLink,
-} from "@react-pdf/renderer";
 import Nav3 from "../components/Nav/Nav3";
 
-// Define styles for the PDF to match your UI design
-const styles = StyleSheet.create({
-  page: {
-    padding: 20,
-    backgroundColor: "white",
-  },
-  sectionHeader: {
-    color: "black",
-    padding: 10,
-    fontWeight: "bold",
-    fontSize: 16,
-  },
-  sectionContent: {
-    marginBottom: 20,
-    padding: 10,
-    border: "2px solid #B1B1B1",
-  },
-  flexRow: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    gap: 10,
-  },
-  flexRowHeading: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginTop: 30,
-    borderBottomWidth: 2,
-    borderBottomColor: "#B1B1B1",
-    paddingBottom: 10,
-  },
-  boldText: {
-    fontWeight: "bold",
-    padding: 8,
-  },
-  boldText2: {
-    fontWeight: "bold",
-    padding: 8,
-  },
-  boldText3: {
-    fontWeight: "bold",
-    padding: 18,
-    marginTop: 30,
-  },
-  underlineText: {
-    color: "#1d70b8",
-    padding: 8,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-});
-
-const IncomeTextHistoryPDF = () => {
-  return (
-    <Document>
-      <Page style={styles.page}>
-        {/* Updated Heading Section */}
-        <View style={styles.flexRowHeading}>
-          <View>
-            <Text style={styles.boldText2}>
-              Hm Revenue <br /> Customs
-            </Text>
-          </View>
-          <View>
-            <Text style={styles.boldText2}>PAUL ADEYEMO</Text>
-          </View>
-        </View>
-
-        <Text style={styles.boldText3}>PAYE details for PAUL ADEYEMO</Text>
-        <Text style={styles.boldText2}>
-          Address: 24 RIDGEHURST AVENUE WATFORD WD25 7AY
-        </Text>
-        <Text style={styles.boldText2}>National Insurance: JX 88 73 26 C</Text>
-
-        <Text style={styles.boldText2}>6 April 2024 to 5 April 2025</Text>
-
-        {/* First Section */}
-        <View style={styles.sectionContent}>
-          <Text style={styles.sectionHeader}>WSP UK LTD</Text>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Employer PAYE reference</Text>
-            <Text>581/MW909</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Start date</Text>
-            <Text>1 August 2022</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>End date</Text>
-            <Text>Not applicable</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Taxable income</Text>
-            <Text>£37,113.40</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Income Tax paid</Text>
-            <Text>£6,687.59</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Tax code</Text>
-            <Text>K5598X</Text>
-          </View>
-        </View>
-
-        {/* Second Section */}
-        <View style={styles.sectionContent}>
-          <Text style={styles.sectionHeader}>
-            OMEGA ENVIRONMENTAL SERVICES LIMITED
-          </Text>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Employer PAYE reference</Text>
-            <Text>475/WA74651</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Start date</Text>
-            <Text>22 September 2022</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>End date</Text>
-            <Text>31 July 2024</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Taxable income</Text>
-            <Text>£21,029.49</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Income Tax paid</Text>
-            <Text>£4,221.06</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Tax code</Text>
-            <Text>Currently unavailable</Text>
-          </View>
-        </View>
-
-        {/* Third Section */}
-        <View style={styles.sectionContent}>
-          <Text style={styles.sectionHeader}>CANAL & RIVER TRUST</Text>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Employer PAYE reference</Text>
-            <Text>120/TA76245</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Start date</Text>
-            <Text>2 September 2024</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>End date</Text>
-            <Text>Not applicable</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Taxable income</Text>
-            <Text>£19,888.10</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Income Tax paid</Text>
-            <Text>£2,870.74</Text>
-          </View>
-          <View style={styles.flexRow}>
-            <Text style={styles.boldText}>Tax code</Text>
-            <Text>DOX</Text>
-          </View>
-        </View>
-      </Page>
-    </Document>
-  );
-};
-
 const IncomeTextHistory = () => {
+  const incomeHistory = [
+    {
+      year: "6 April 2022 to 5 April 2023",
+      entries: [
+        {
+          employer: "WSP UK LTD",
+          reference: "581/MW909",
+          startDate: "1 August 2022",
+          endDate: "Not applicable",
+          taxableIncome: "£43,533.81",
+          taxPaid: "£6,190.80",
+          taxCode: "Currently unavailable",
+        },
+        {
+          employer: "WSP UK LTD",
+          reference: "581/MW909",
+          startDate: "1 August 2022",
+          endDate: "Not applicable",
+          taxableIncome: "£28,875",
+          taxPaid: "£4,634.40",
+          taxCode: "816LX",
+        },
+        {
+          employer: "WSP UK LTD",
+          reference: "68/G85",
+          startDate: "25 April 2022",
+          endDate: "25 July 2022",
+          taxableIncome: "£11,307.70",
+          taxPaid: "£1,741.80",
+          taxCode: "Currently unavailable",
+        },
+        {
+          employer: "INTERACTION RECRUITMENT PLC",
+          reference: "126/I60",
+          startDate: "9 May 2022",
+          endDate: "21 August 2022",
+          taxableIncome: "£71.25",
+          taxPaid: "£14.20",
+          taxCode: "Currently unavailable",
+        },
+      ],
+    },
+    {
+      view: "View 2022 to 2023 tax year summary",
+      year: "6 April 2021 to 5 April 2022",
+      entries: [
+        {
+          employer: "AVISON YOUNG (UK) LIMITED",
+          reference: "951/O7068",
+          startDate: "29 March 2021",
+          endDate: "22 March 2022",
+          taxableIncome: "£30,146.86",
+          taxPaid: "£3,592",
+          taxCode: "1189LX",
+        },
+      ],
+    },
+    {
+      view: "View 2021 to 2022 tax year summary",
+      year: "6 April 2020 to 5 April 2021",
+      entries: [
+        {
+          employer: "GIFFEN GROUP LIMITED",
+          reference: "951/G7112",
+          startDate: "20 January 2020",
+          endDate: "31 July 2020",
+          taxableIncome: "£8,702.56",
+          taxPaid: "£906.40",
+          taxCode: "Currently unavailable",
+        },
+        {
+          employer: "CARNELL SUPPORT SERVICES LTD",
+          reference: "586/C833",
+          startDate: "3 August 2020",
+          endDate: "19 March 2021",
+          taxableIncome: "£18,060.04",
+          taxPaid: "£3,607.40",
+          taxCode: "K175X",
+        },
+        {
+          employer: "AECOM LTD",
+          reference: "951/O7068",
+          startDate: "29 March 2021",
+          endDate: "22 March 2022",
+          taxCode: "Currently unavailable",
+        },
+      ],
+    },
+    {
+      view: "View 2020 to 2021 tax year summary",
+      year: "6 April 2019 to 5 April 2020",
+      entries: [
+        {
+          employer: "GIFFEN GROUP LIMITED",
+          reference: "951/G7112",
+          startDate: "20 January 2020",
+          endDate: "31 July 2020",
+          taxableIncome: "£5,144.99",
+          taxPaid: "£0",
+          taxCode: "1250L",
+        },
+      ],
+    },
+  ];
+
   return (
     <div>
       <Nav3 />
       <div className="max-w-7xl mx-auto space-y-4 p-10 md:p-5 lg:p-0">
-        <div>
-          <h2 className="md:text-4xl font-bold">PAYE Income Tax History</h2>
-        
-          <PDFDownloadLink
-            document={<IncomeTextHistoryPDF />}
-            fileName="Income_Tax_History.pdf"
-          >
-            {({ loading }) =>
-              loading ? (
-                <button className="bg-[#1d70b8] text-white p-2 rounded mt-4">
-                  Loading PDF...
-                </button>
-              ) : (
-                <button className="underline py-3 cursor-pointer">
-                  Print this page
-                </button>
-              )
-            }
-          </PDFDownloadLink>
-          <h6 className="underline py-3 text-[#1d70b8]">
-            PAYE Details for PAUL ADEYEMO
-          </h6>
-        </div>
-        <div className="space-y-6 py-4">
-          <h2 className="font-bold text-2xl">6 April 2024 to 5 April 2025</h2>
-
-          {/* Content */}
-          <div id="pdf-content">
-            {/* First Section */}
-            <div className="border w-full md:w-1/2 ">
-              <h2 className="bg-gray-400 p-2 text-white">WSP UK LTD</h2>
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Employer PAYE reference</span>
-                  <span>581/MW909</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Start date</span>
-                  <span>1 August 2022</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">End date</span>
-                  <span>Not applicable</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Taxable income</span>
-                  <span>£37,113.40</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Income Tax paid</span>
-                  <span>£6,687.59</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Tax code</span>
-                  <span>K5598X</span>
-                </div>
-              </div>
-            </div>
-            {/* Other sections */}
-          </div>
-        </div>
-        <div className="space-y-6 py-4">
-         
-
-          {/* Content */}
-          <div id="pdf-content">
-            {/* First Section */}
-            <div className="border w-full md:w-1/2 ">
-              <h2 className="bg-gray-400 p-2 text-white">OMEGA ENVIRONMENTAL SERVICES LIMITED</h2>
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Employer PAYE reference</span>
-                  <span>475/WA74651</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Start date</span>
-                  <span>22 September 2022</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">End date</span>
-                  <span>31 July 2024</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Taxable income</span>
-                  <span>£21,029.49</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Income Tax paid</span>
-                  <span>£4,221.06</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Tax code</span>
-                  <span>Currently unavailable</span>
-                </div>
-              </div>
-            </div>
-            {/* Other sections */}
-          </div>
-        </div>
-        <div className="space-y-6 py-4">
-         
-
-          {/* Content */}
-          <div id="pdf-content">
-            {/* First Section */}
-            <div className="border w-full md:w-1/2 ">
-              <h2 className="bg-gray-400 p-2 text-white">CANAL & RIVER TRUS</h2>
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Employer PAYE reference</span>
-                  <span>120/TA76245</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Start date</span>
-                  <span>22 September 2024</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">End date</span>
-                  <span>Not applicable</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Taxable income</span>
-                  <span>£19,888.10</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Income Tax paid</span>
-                  <span>£2,870.74</span>
-                </div>
-              </div>
-
-              <div className="py-4 p-2 border-b-2">
-                <div className="flex justify-between">
-                  <span className="font-bold">Tax code</span>
-                  <span>DOX</span>
-                </div>
-              </div>
-            </div>
-            {/* Other sections */}
-          </div>
-        </div>
-        {/* PDF download button */}
-        {/* <PDFDownloadLink
-          document={<IncomeTextHistoryPDF />}
-          fileName="Income_Tax_History.pdf"
+        <h2 className="md:text-[3rem] font-bold">PAYE Income Tax History</h2>
+        <button
+          onClick={() => window.print()}
+          className="underline py-3 cursor-pointer"
         >
-          {({ loading }) =>
-            loading ? (
-              <button className="bg-[#1d70b8] text-white p-2 rounded mt-4">
-                Loading PDF...
+          Print this page
+        </button>
+
+        {incomeHistory.map((yearData, index) => (
+          <div key={index} className="space-y-6 py-4">
+            <h2 className="font-bold text-[1.5rem]">{yearData.year}</h2>
+            {yearData.view && (
+              <button className="text-blue-600 underline text-lg font-semibold">
+                {yearData.view}
               </button>
-            ) : (
-              <button className="bg-[#1d70b8] text-white p-2 rounded mt-4">
-                Download PDF
-              </button>
-            )
-          }
-        </PDFDownloadLink> */}
+            )}
+            {yearData.entries.map((entry, i) => (
+              <div key={i} className="border w-full md:w-1/2">
+                <h2 className="bg-[#F3F2F1] p-5 text-[1.1875rem] text-black font-bold">
+                  {entry.employer}
+                </h2>
+                <div className="p-2 space-y-2">
+                  <div className="grid grid-cols-2 border-b border-black px-4 py-2">
+                    <span className="font-semibold text-[1.3rem]">
+                      Employer PAYE reference
+                    </span>
+                    <span className="text-[1.2rem]">{entry.reference}</span>
+                  </div>
+                  <div className="grid grid-cols-2 border-b border-black px-4 py-2">
+                    <span className="font-semibold text-[1.3rem]">
+                      Start date
+                    </span>
+                    <span className="text-[1.2rem]">{entry.startDate}</span>
+                  </div>
+                  <div className="grid grid-cols-2 border-b border-black px-4 py-2">
+                    <span className="font-semibold text-[1.3rem]">
+                      End date
+                    </span>
+                    <span className="text-[1.2rem]">{entry.endDate}</span>
+                  </div>
+                  {entry.taxableIncome && (
+                    <div className="grid grid-cols-2 border-b border-black px-4 py-2">
+                      <span className="font-semibold text-[1.3rem]">
+                        Taxable income
+                      </span>
+                      <span className="text-[1.2rem]">
+                        {entry.taxableIncome}
+                      </span>
+                    </div>
+                  )}
+                  {entry.taxPaid && (
+                    <div className="grid grid-cols-2 border-b border-black px-4 py-2">
+                      <span className="font-semibold text-[1.3rem]">
+                        Income Tax paid
+                      </span>
+                      <span className="text-[1.2rem]">{entry.taxPaid}</span>
+                    </div>
+                  )}
+                  <div className="grid grid-cols-2 border-b border-black px-4 py-2">
+                    <span className="font-semibold text-[1.3rem]">
+                      Tax code
+                    </span>
+                    <span className="text-[1.2rem]">{entry.taxCode}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+
+        <p className="text-blue-600 py-5 underline text-lg font-semibold">
+          {" "}
+          View 2019 to 2020 tax year summary
+        </p>
+        <p className="text-[#1d70b8] underline font-medium py-4">
+          {" "}
+          Is the page not working properly? (opens in new tab){" "}
+        </p>
       </div>
     </div>
   );

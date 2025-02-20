@@ -1,15 +1,29 @@
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Nav2 = () => {
   const navigate = useNavigate(); // Initialize navigate function
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    setIsLoggedIn(!!user);
+  }, []);
+
+  const handleSignOut = () => {
+    localStorage.removeItem("user");
+    setIsLoggedIn(false);
+    navigate("/login");
+  };
   return (
     <div>
       <>
         <div className="bg-black ">
           <div className="text-white p-4 flex flex-wrap justify-between items-center max-w-7xl mx-auto gap-3 lg:gap-[400px]">
-            <div className=" text-2xl font-bold">
-              <Link to={"/"}>GOV.UK</Link>{" "}
+            <div className=" text-2xl font-bold text-white">
+              <Link to={"/bussness"}>
+              <img src="/download.png" alt="" style={{ filter: 'invert(100%) brightness(100%) contrast(100%)' }} />
+              </Link>{" "}
             </div>
             <div className="text-center font-bold">Personal tax account</div>
           </div>
@@ -34,7 +48,15 @@ const Nav2 = () => {
                 <a href="#">Profile and setting</a>
               </li>
               <li>
-                <a href="#">Sign out</a>
+                {isLoggedIn ? (
+                  <button onClick={handleSignOut} className="text-black">
+                    Sign out
+                  </button>
+                ) : (
+                  <Link to="/login" className="text-text-black">
+                    Sign in
+                  </Link>
+                )}
               </li>
             </ul>
           </nav>

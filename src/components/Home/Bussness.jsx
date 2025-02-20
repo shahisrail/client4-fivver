@@ -47,8 +47,8 @@ const Bussness = () => {
             </li>
             <li> manage your tax credits</li>
           </ul>
-          <p className="text-[#1d70b8] underline">
-            <Link to={"/personal-account"}>View your Personal Account</Link>{" "}
+          <p className="text-[#1d70b8] underline ">
+            <Link to={"/personal-account"} className="selection:bg-yellow-300  active:bg-yellow-300">View your Personal Account</Link>{" "}
           </p>
         </div>
         <p className="border-b-2"></p>
